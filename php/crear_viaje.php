@@ -11,7 +11,7 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 
 // Verificar la conexión
 if ($conn->connect_error) {
-    die("Error de conexión: " . $conn->connect_error);
+  die("Error de conexión: " . $conn->connect_error);
 }
 
 // Verificar si se ha enviado el formulario
@@ -28,18 +28,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
   // Validar que el nombre de usuario no sea nulo
   if (!empty($username)) {
-      // Consulta SQL para insertar los datos en la tabla viajes
-      $insertSql = "INSERT INTO viajes (Nombre_logueo, Numero_Factura, Nombre_Cliente, Numero_Contacto, Lugar_Entrega, observaciones)
+    // Consulta SQL para insertar los datos en la tabla viajes
+    $insertSql = "INSERT INTO viajes (Nombre_logueo, Numero_Factura, Nombre_Cliente, Numero_Contacto, Lugar_Entrega, observaciones)
             VALUES ('$username', '$numeroFactura', '$nombreCliente', '$numeroContacto', '$lugarEntrega', '$observaciones')";
 
-      // Ejecutar la consulta de inserción
-      if ($conn->query($insertSql) === TRUE) {
-          echo "Datos insertados correctamente.";
-      } else {
-          echo "Error al insertar datos: " . $conn->error;
-      }
+    // Ejecutar la consulta de inserción
+    if ($conn->query($insertSql) === TRUE) {
+      echo "Datos insertados correctamente.";
+    } else {
+      echo "Error al insertar datos: " . $conn->error;
+    }
   } else {
-      echo "Error: Nombre de usuario no válido.";
+    echo "Error: Nombre de usuario no válido.";
   }
 }
 // Cerrar la conexión
@@ -59,57 +59,70 @@ $conn->close();
 
 <body>
   <header>
-   <!-- Boostrap Nav -->
-
-   <nav class="navbar navbar-expand-lg bg-primary">
-      <div class="container-fluid">
-        <div class="d-flex align-items-center">
-          <a href="#" class="text-white me-3">
-            <i class="fas fa-user"></i>
-          </a>
-          <div class="dropdown">
-            <button class="btn btn-light rounded-circle dropdown-toggle" type="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
-              <i class="fas fa-user"></i>
-            </button>
-            <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-              <li><a class="dropdown-item" href="#">Perfil</a></li>
-              <li><a class="dropdown-item" href="#">Viajes creados</a></li>
-              <li><a class="dropdown-item" href="#">Viajes asignados</a></li>
-              <li><a class="dropdown-item" href="#">Salir</a></li>
-            </ul>
-          </div>
+    <div class="px-3 py-2 text-bg-secundary border-bottom">
+      <div class="container">
+        <div class="px-3 py-2 border-bottom mb-3">
         </div>
-        <?php
-        if (isset($_SESSION['username'])) { ?>
-          <h3 style="color:white;">Bienvenido <?php echo $_SESSION['username']; ?>!</h3>
-        <?php } ?>
-        <button class="navbar-toggler navbar-dark" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link active text-white" aria-current="page" href="#">Inicio</a>
+        <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+          <a href="/" class="d-flex align-items-center my-2 my-lg-0 me-lg-auto text-white text-decoration-none">
+            <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap">
+              <use xlink:href="#bootstrap"></use>
+            </svg>
+          </a>
+          <style>
+            /* Estilos para los enlaces */
+            a.nav-link,
+            a.nav-link:hover,
+            a.nav-link:focus,
+            a.nav-link:active {
+              color: black !important;
+              text-decoration: none !important;
+            }
+          </style>
+          <ul class="nav col-12 col-lg-auto my-2 justify-content-center my-md-0 text-small">
+            <li>
+              <a href="#" class="nav-link text-secundary">
+                <svg class="bi d-block mx-auto mb-1" width="24" height="24">
+                  <use xlink:href="#home"></use>
+                </svg>
+                Inicio
+              </a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link text-white" href="./pages/recetas.html">Recetas</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-white" href="#">Colaborar</a>
-            </li>
+
           </ul>
-          <form class="d-flex" role="search">
-            <input class="form-control me-2" type="search" placeholder="Que deseas buscar?" aria-label="Search">
-            <button class="btn btn-light" type="submit">Buscar</button>
-          </form>
+          <div class="dropdown text-end">
+              <a href="#" class="d-block link-body-emphasis text-decoration-none dropdown-toggle show" data-bs-toggle="dropdown" aria-expanded="true">
+
+                <img src="https://github.com/mdo.png" alt="mdo" width="32" height="32" class="rounded-circle">
+                <?php
+                
+                if (isset($_SESSION['username'])) {
+                  echo '<a class="dropdown-item" href="#">' . $_SESSION['username'] . '</a>';
+                }
+                ?>
+              </a>
+
+              <ul class="dropdown-menu text-small show" style="position: absolute; inset: 0px auto auto 0px; margin: 0px; transform: translate(0px, 34px);" data-popper-placement="bottom-start">
+
+                <li><a class="dropdown-item" href="#">Nuevo Domicilio</a></li>
+                <li><a class="dropdown-item" href="#">Opciones</a></li>
+                <li><a class="dropdown-item" href="#">Perfil</a></li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item" href="#">Salir</a></li>
+              </ul>
+            </div>
         </div>
       </div>
-    </nav>
-<!-- crear viaje cuerpo del codigo -->
+    </div>
 
-<br>
-<br>
-<div class="container">
+  </header>
+  <!-- crear viaje cuerpo del codigo -->
+
+  <br>
+  <br>
+  <div class="container">
     <h2>Formulario de Registro de Viajes</h2>
 
     <form action="crear_viaje.php" method="POST">
@@ -125,7 +138,7 @@ $conn->close();
         <input type="text" class="form-control" id="nombreCliente" name="nombreCliente" required>
       </div>
 
-        <br>
+      <br>
 
       <div class="form-group">
         <label for="numeroContacto">Número de Contacto:</label>
@@ -163,14 +176,6 @@ $conn->close();
           <use xlink:href="#bootstrap"></use>
         </svg>
       </a>
-
-      <ul class="nav col-md-4 justify-content-end">
-        <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Home</a></li>
-        <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Features</a></li>
-        <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Pricing</a></li>
-        <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">FAQs</a></li>
-        <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">About</a></li>
-      </ul>
     </footer>
   </div>
 
@@ -179,4 +184,3 @@ $conn->close();
 </body>
 
 </html>
-

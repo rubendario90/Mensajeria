@@ -11,147 +11,186 @@
 
 <body>
   <header>
-    <!-- Boostrap Nav -->
+    <div class="px-3 py-2 text-bg-primary border-bottom">
+      <div class="container">
+        <div class="px-3 py-2 border-bottom mb-3">
+          <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+            <a href="/" class="d-flex align-items-center my-2 my-lg-0 me-lg-auto text-white text-decoration-none">
+              <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap">
+                <use xlink:href="#bootstrap"></use>
+              </svg>
+            </a>
+            <style>
+              /* Estilos para los enlaces */
+              a.nav-link,
+              a.nav-link:hover,
+              a.nav-link:focus,
+              a.nav-link:active {
+                color: white !important;
+                text-decoration: none !important;
+              }
+            </style>
 
-    <nav class="navbar navbar-expand-lg bg-primary">
-      <div class="container-fluid">
-        <div class="d-flex align-items-center">
-          <a href="#" class="text-white me-3">
-            <i class="fas fa-user"></i>
-          </a>
-          <div class="dropdown">
-            <button class="btn btn-light rounded-circle dropdown-toggle" type="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
-              <i class="fas fa-user"></i>
-            </button>
-            <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-              <li><a class="dropdown-item" href="#">Perfil</a></li>
-              <li><a class="dropdown-item" href="#">Viajes creados</a></li>
-              <li><a class="dropdown-item" href="#">Viajes asignados</a></li>
-              <li><a class="dropdown-item" href="#">Salir</a></li>
+            <ul class="nav col-12 col-lg-auto my-2 justify-content-center my-md-0 text-small">
+              <li>
+                <a href="#" class="nav-link text-secondary">
+                  <svg class="bi d-block mx-auto mb-1" width="24" height="24">
+                    <use xlink:href="#home"></use>
+                  </svg>
+                  Inicio
+                </a>
+              </li>
+              <li>
+                <a href="#" class="nav-link text-white">
+                  <svg class="bi d-block mx-auto mb-1" width="24" height="24">
+                    <use xlink:href="#speedometer2"></use>
+                  </svg>
+                  Historial
+                </a>
+              </li>
+              <li>
+                <a href="#" class="nav-link text-white">
+                  <svg class="bi d-block mx-auto mb-1" width="24" height="24">
+                    <use xlink:href="#table"></use>
+                  </svg>
+                  Viajes sin asignar
+                </a>
+              </li>
+              <li>
+                <a href="#" class="nav-link text-white">
+                  <svg class="bi d-block mx-auto mb-1" width="24" height="24">
+                    <use xlink:href="#grid"></use>
+                  </svg>
+                  Crear Ingreso
+                </a>
+              </li>
+              <li>
+                <a href="#" class="nav-link text-white">
+                  <svg class="bi d-block mx-auto mb-1" width="24" height="24">
+                    <use xlink:href="#people-circle"></use>
+                  </svg>
+                  Crear Viaje
+                </a>
+              </li>
             </ul>
-          </div>
-        </div>
-        <?php
-        session_start();
-        if (isset($_SESSION['username'])) { ?>
-          <h3 style="color:white;">Bienvenido <?php echo $_SESSION['username']; ?>!</h3>
-        <?php } ?>
-        <button class="navbar-toggler navbar-dark" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link active text-white" aria-current="page" href="#">Inicio</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-white" href="#">Base de conocimiento</a>
-            </li>
-          </ul>
-          <form class="d-flex" role="search">
-            <input class="form-control me-2" type="search" placeholder="Que deseas buscar?" aria-label="Search">
-            <button class="btn btn-light" type="submit">Buscar</button>
-          </form>
-        </div>
-      </div>
-    </nav>
+            <div class="dropdown text-end">
+              <a href="#" class="d-block link-body-emphasis text-decoration-none dropdown-toggle show" data-bs-toggle="dropdown" aria-expanded="true">
 
+                <img src="https://github.com/mdo.png" alt="mdo" width="32" height="32" class="rounded-circle">
+                <?php
+                session_start();
+                if (isset($_SESSION['username'])) {
+                  echo '<a class="dropdown-item" href="#">' . $_SESSION['username'] . '</a>';
+                }
+                ?>
+              </a>
 
+              <ul class="dropdown-menu text-small show" style="position: absolute; inset: 0px auto auto 0px; margin: 0px; transform: translate(0px, 34px);" data-popper-placement="bottom-start">
 
-
-    <!-- cards -->
-    <div class="container px-4 py-5" id="custom-cards">
-      <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
-        <div class="col">
-          <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg" style="background-image: url(images/crear_viaje.jpg); background-size: cover;">
-            <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
-              <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold" style="color: black;">Crear viaje</h3>
-              </br></br></br></br></br>
-              <button class="btn btn-warning text-blue" onclick="window.location.href='crear_viaje.php'">Ir</button>
-            </div>
-          </div>
-        </div>
-
-        <div class="col">
-          <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg" style="background-image: url(images/Mensajeros.jpg); background-size: cover;">
-            <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
-              <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold" style="color: black;">Mensajeros</h3>
-              </br></br></br></br></br>
-              <button class="btn btn-warning text-blue" onclick="window.location.href='viajes.php'">Ir</button>
-            </div>
-          </div>
-        </div>
-
-        <div class="col">
-          <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg" style="background-image: url(images/Mensajeros.jpg); background-size: cover;">
-            <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
-              <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold" style="color: black;">Vendedores</h3>
-              </br></br></br></br></br>
-              <button class="btn btn-warning text-blue" onclick="window.location.href='viajes.php'">Ir</button>
+                <li><a class="dropdown-item" href="#">Nuevo Domicilio</a></li>
+                <li><a class="dropdown-item" href="#">Opciones</a></li>
+                <li><a class="dropdown-item" href="#">Perfil</a></li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item" href="#">Salir</a></li>
+              </ul>
             </div>
           </div>
         </div>
       </div>
-    </div>
 
-    <div class="container px-4" id="custom-cards">
+  </header>
 
-      <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
+
+
+  <!-- cards -->
+  <div class="container px-4 py-5" id="custom-cards">
+    <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
       <div class="col">
-          <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg" style="background-image: url(images/Mensajeros.jpg); background-size: cover;">
-            <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
-              <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold" style="color: black;">Viajes sin asignar</h3>
-              </br></br></br></br></br>
-              <button class="btn btn-warning text-blue" onclick="window.location.href='viajes_sin_asignar.php'">Ir</button>
-            </div>
+        <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg" style="background-image: url(images/crear_viaje.jpeg); background-size: cover;">
+          <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+            <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold" style="color: black;">Crear viaje</h3>
+            </br></br></br></br></br>
+            <button class="btn btn-warning text-blue" onclick="window.location.href='crear_viaje.php'">Ir</button>
           </div>
         </div>
+      </div>
 
-        <div class="col">
-          <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg" style="background-image: url(images/Mensajeros.jpg); background-size: cover;">
-            <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
-              <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold" style="color: black;">Mensajeros</h3>
-              </br></br></br></br></br>
-              <button class="btn btn-warning text-blue" onclick="window.location.href='viajes.php'">Ir</button>
-            </div>
+      <div class="col">
+        <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg" style="background-image: url(images/Mensajeros.jpg); background-size: cover;">
+          <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+            <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold" style="color: black;">Mensajeros</h3>
+            </br></br></br></br></br>
+            <button class="btn btn-warning text-blue" onclick="window.location.href='viajes.php'">Ir</button>
           </div>
         </div>
+      </div>
 
-        <div class="col">
-          <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg" style="background-image: url(images/Mensajeros.jpg); background-size: cover;">
-            <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
-              <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold" style="color: black;">Mensajeros</h3>
-              </br></br></br></br></br>
-              <button class="btn btn-warning text-blue" onclick="window.location.href='viajes.php'">Ir</button>
-            </div>
+      <div class="col">
+        <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg" style="background-image: url(images/vendedores.jpg); background-size: cover;">
+          <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+            <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold" style="color: black;">Vendedores</h3>
+            </br></br></br></br></br>
+            <button class="btn btn-warning text-blue" onclick="window.location.href='viajes.php'">Ir</button>
           </div>
         </div>
       </div>
     </div>
+  </div>
 
-    <!-- footer -->
-    <div class="container">
-      <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
-        <p class="col-md-4 mb-0 text-body-secondary">© 2023 Company, Inc</p>
+  <div class="container px-4" id="custom-cards">
 
-        <a href="/" class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
-          <svg class="bi me-2" width="40" height="32">
-            <use xlink:href="#bootstrap"></use>
-          </svg>
-        </a>
+    <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
+      <div class="col">
+        <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg" style="background-image: url(images/Mensajeros.jpg); background-size: cover;">
+          <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+            <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold" style="color: black;">Viajes sin asignar</h3>
+            </br></br></br></br></br>
+            <button class="btn btn-warning text-blue" onclick="window.location.href='viajes_sin_asignar.php'">Ir</button>
+          </div>
+        </div>
+      </div>
 
-        <ul class="nav col-md-4 justify-content-end">
-          <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Home</a></li>
-          <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Features</a></li>
-          <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Pricing</a></li>
-          <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">FAQs</a></li>
-          <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">About</a></li>
-        </ul>
-      </footer>
+      <div class="col">
+        <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg" style="background-image: url(images/Mensajeros.jpg); background-size: cover;">
+          <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+            <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold" style="color: black;">Mensajeros</h3>
+            </br></br></br></br></br>
+            <button class="btn btn-warning text-blue" onclick="window.location.href='viajes.php'">Ir</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg" style="background-image: url(images/Mensajeros.jpg); background-size: cover;">
+          <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+            <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold" style="color: black;">Mensajeros</h3>
+            </br></br></br></br></br>
+            <button class="btn btn-warning text-blue" onclick="window.location.href='viajes.php'">Ir</button>
+          </div>
+        </div>
+      </div>
     </div>
+  </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js" integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js" integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ" crossorigin="anonymous"></script>
+  <!-- footer -->
+  <div class="container">
+    <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+      <p class="col-md-4 mb-0 text-body-secondary">© 2023 Automuelles, Inc</p>
+
+      <a href="/" class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+        <svg class="bi me-2" width="40" height="32">
+          <use xlink:href="#bootstrap"></use>
+        </svg>
+      </a>
+
+
+    </footer>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js" integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js" integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ" crossorigin="anonymous"></script>
 </body>
 
 </html>
