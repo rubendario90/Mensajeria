@@ -75,7 +75,7 @@
   <div class="container">
     <br>
     <br>
-    <h2>Listado de Viajes Pendientes</h2>
+    <h2>Listado de Viajes Sin Asignacion</h2>
 
 
     <!-- footer -->
