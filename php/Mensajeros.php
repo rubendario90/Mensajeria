@@ -43,7 +43,7 @@
 
             <ul class="nav col-12 col-lg-auto my-2 justify-content-center my-md-0 text-small">
               <li>
-                <a href="inicio.php" class="nav-link text-secondary">
+                <a href="#" class="nav-link text-secondary">
                   <svg class="bi d-block mx-auto mb-1" width="24" height="24">
                     <use xlink:href="#home"></use>
                   </svg>
@@ -63,7 +63,7 @@
                   <svg class="bi d-block mx-auto mb-1" width="24" height="24">
                     <use xlink:href="#table"></use>
                   </svg>
-                  Viajes sin asignar
+                  Inventario
                 </a>
               </li>
               <li>
@@ -71,7 +71,7 @@
                   <svg class="bi d-block mx-auto mb-1" width="24" height="24">
                     <use xlink:href="#grid"></use>
                   </svg>
-                  Crear Ingreso
+                  Cotizaciones
                 </a>
               </li>
               <li>
@@ -79,7 +79,7 @@
                   <svg class="bi d-block mx-auto mb-1" width="24" height="24">
                     <use xlink:href="#people-circle"></use>
                   </svg>
-                  Crear Viaje
+                  Viajes
                 </a>
               </li>
             </ul>
@@ -97,7 +97,7 @@
 
               <ul class="dropdown-menu text-small show" style="position: absolute; inset: 0px auto auto 0px; margin: 0px; transform: translate(0px, 34px);" data-popper-placement="bottom-start">
 
-                <li><a class="dropdown-item" href="#">viajes</a></li>
+                
                 <li><a class="dropdown-item" href="#">Opciones</a></li>
                 <li><a class="dropdown-item" href="#">Perfil</a></li>
                 <li>

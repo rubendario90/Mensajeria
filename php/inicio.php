@@ -63,7 +63,7 @@
                   <svg class="bi d-block mx-auto mb-1" width="24" height="24">
                     <use xlink:href="#table"></use>
                   </svg>
-                  Viajes sin asignar
+                  Inventario
                 </a>
               </li>
               <li>
@@ -71,7 +71,7 @@
                   <svg class="bi d-block mx-auto mb-1" width="24" height="24">
                     <use xlink:href="#grid"></use>
                   </svg>
-                  Crear Ingreso
+                  Cotizaciones
                 </a>
               </li>
               <li>
@@ -79,7 +79,7 @@
                   <svg class="bi d-block mx-auto mb-1" width="24" height="24">
                     <use xlink:href="#people-circle"></use>
                   </svg>
-                  Crear Viaje
+                  Viajes
                 </a>
               </li>
             </ul>
@@ -97,7 +97,7 @@
 
               <ul class="dropdown-menu text-small show" style="position: absolute; inset: 0px auto auto 0px; margin: 0px; transform: translate(0px, 34px);" data-popper-placement="bottom-start">
 
-                <li><a class="dropdown-item" href="#">viajes</a></li>
+                
                 <li><a class="dropdown-item" href="#">Opciones</a></li>
                 <li><a class="dropdown-item" href="#">Perfil</a></li>
                 <li>
@@ -136,7 +136,7 @@
           <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
             <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold" style="color: black;">Mensajeros</h3>
             </br></br></br></br></br>
-            <button class="btn btn-warning text-blue" onclick="window.location.href='viajes.php'">Ir</button>
+            <button class="btn btn-warning text-blue" onclick="window.location.href='Mensajeros.php'">Ir</button>
           </div>
         </div>
       </div>
