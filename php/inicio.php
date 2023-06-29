@@ -146,7 +146,7 @@
           <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
             <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold" style="color: black;">Vendedores</h3>
             </br></br></br></br></br>
-            <button class="btn btn-warning text-blue" onclick="window.location.href='viajes.php'">Ir</button>
+            <button class="btn btn-warning text-blue" onclick="window.location.href='vendedores.php'">Ir</button>
           </div>
         </div>
       </div>

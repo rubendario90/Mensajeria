@@ -43,7 +43,7 @@
 
             <ul class="nav col-12 col-lg-auto my-2 justify-content-center my-md-0 text-small">
               <li>
-                <a href="#" class="nav-link text-secondary">
+                <a href="inicio.php" class="nav-link text-secondary">
                   <svg class="bi d-block mx-auto mb-1" width="24" height="24">
                     <use xlink:href="#home"></use>
                   </svg>
@@ -139,7 +139,7 @@
                     <div class="card" style="width: 18rem;">
                         <img src="images/viajes.jpg" class="card-img-top rounded-circle" alt="...">
                         <div class="card-body">
-                            <h5 class="card-title">Domicilios Asignados</h5>
+                            <h5 class="card-title">Domicilios Pendientes</h5>
                             <p class="card-text">Atrévete a llevar cada encomienda a su destino, dejando huellas de satisfacción.</p>
                             <a href="#" class="btn btn-primary">Ingresar</a>
                         </div>
