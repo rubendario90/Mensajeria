@@ -125,7 +125,7 @@
                     <div class="card" style="width: 18rem;">
                         <img src="images/Entregas.jpg" class="card-img-top rounded-circle" alt="...">
                         <div class="card-body">
-                            <h5 class="card-title">Crear Viajes</h5>
+                            <h5 class="card-title">Crear Domicilio</h5>
                             <p class="card-text">Desde la salida hasta la entrega, eres el héroe en cada viaje.</p>
                             <a href="crear_viaje.php" class="btn btn-primary">Ingresar</a>
                             
@@ -152,7 +152,7 @@
                     <div class="card" style="width: 18rem;">
                         <img src="images/historial.jpg" class="card-img-top rounded-circle" alt="...">
                         <div class="card-body">
-                            <h5 class="card-title">Historial</h5>
+                            <h5 class="card-title">Domicilios En Curso</h5>
                             <p class="card-text">Con cada destino alcanzado, dejamos una estela de excelencia en nuestros viajes completados.</p>
                             <a href="#" class="btn btn-primary">Ingresar</a>
                         </div>

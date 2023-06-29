@@ -3,12 +3,12 @@ if (isset($_GET['id'])) {
   $id = $_GET['id'];
 
   // Realizar la consulta SQL para obtener la información de la imagen
-  $sql = "SELECT imagen_nombre, imagen_tipo, imagen_contenido FROM registro_viaje WHERE id = $id";
+  $sql = "SELECT imagen_nombre, imagen_tipo, imagen_contenido FROM inventario WHERE id = $id";
 
   // Establecer la conexión con la base de datos
   $servername = "localhost";
   $username = "root";
-  $password = "";
+  $password = "0607";
   $dbname = "automuelles";
 
   $conn = new mysqli($servername, $username, $password, $dbname);

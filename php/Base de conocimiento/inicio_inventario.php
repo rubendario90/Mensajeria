@@ -13,7 +13,17 @@
   <header>
     <div class="px-3 py-2 text-bg-primary border-bottom">
       <div class="container">
+        
+        <div class="text-end">
+            <button type="button" class="btn btn-outline-light me-2">
+              Ingresar
+            </button>
+            <button type="button" class="btn btn-outline-light me-2">
+              Registrarse
+            </button>
+          </div>
         <div class="px-3 py-2 border-bottom mb-3">
+        
           <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
             <a href="/" class="d-flex align-items-center my-2 my-lg-0 me-lg-auto text-white text-decoration-none">
               <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap">
@@ -33,7 +43,7 @@
 
             <ul class="nav col-12 col-lg-auto my-2 justify-content-center my-md-0 text-small">
               <li>
-                <a href="#" class="nav-link text-secondary">
+                <a href="php/inicio.php" class="nav-link text-secondary">
                   <svg class="bi d-block mx-auto mb-1" width="24" height="24">
                     <use xlink:href="#home"></use>
                   </svg>
@@ -41,7 +51,7 @@
                 </a>
               </li>
               <li>
-                <a href="#" class="nav-link text-white">
+                <a href="Domicilios.php" class="nav-link text-white">
                   <svg class="bi d-block mx-auto mb-1" width="24" height="24">
                     <use xlink:href="#speedometer2"></use>
                   </svg>
@@ -49,11 +59,11 @@
                 </a>
               </li>
               <li>
-                <a href="#" class="nav-link text-white">
+                <a href="Base de conocimiento/inicio_Inventario.php" class="nav-link text-white">
                   <svg class="bi d-block mx-auto mb-1" width="24" height="24">
                     <use xlink:href="#table"></use>
                   </svg>
-                  Base de Conocimiento
+                  Inventario
                 </a>
               </li>
               <li>
@@ -69,7 +79,7 @@
                   <svg class="bi d-block mx-auto mb-1" width="24" height="24">
                     <use xlink:href="#people-circle"></use>
                   </svg>
-                  Ubicaciones
+                  Viajes
                 </a>
               </li>
             </ul>
@@ -87,7 +97,7 @@
 
               <ul class="dropdown-menu text-small show" style="position: absolute; inset: 0px auto auto 0px; margin: 0px; transform: translate(0px, 34px);" data-popper-placement="bottom-start">
 
-                <li><a class="dropdown-item" href="#">Historial</a></li>
+                
                 <li><a class="dropdown-item" href="#">Opciones</a></li>
                 <li><a class="dropdown-item" href="#">Perfil</a></li>
                 <li>
@@ -95,34 +105,56 @@
                 </li>
                 <li><a class="dropdown-item" href="#">Salir</a></li>
               </ul>
+              
             </div>
+            
+          </div>
+          
+        </div>
+        <input type="search" class="form-control form-control-dark text-bg-white" placeholder="Buscar..." aria-label="Search">
+      </div>
+
+  </header>
+
+
+
+  <!-- cards -->
+  <div class="container px-4 py-5" id="custom-cards">
+    <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
+      <div class="col">
+        <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg" style="background-image: url(images/crear_viaje.jpeg); background-size: cover;">
+          <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+            <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold" style="color: black;">Domicilios</h3>
+            </br></br></br></br></br>
+            <button class="btn btn-warning text-blue" onclick="window.location.href='domicilios.php'">Ir</button>
           </div>
         </div>
       </div>
 
-  </header>
-<!-- cuerpo de la pagina -->
- <div class="container">
-    <h1>Ubicaciones</h1>
-    <form>
-      <div class="form-group">
-        <label for="nombreLugar">Nombre del lugar:</label>
-        <input type="text" class="form-control" id="nombreLugar" placeholder="Ingrese el nombre del lugar">
+      <div class="col">
+        <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg" style="background-image: url(images/Mensajeros.jpg); background-size: cover;">
+          <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+            <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold" style="color: black;">Mensajeros</h3>
+            </br></br></br></br></br>
+            <button class="btn btn-warning text-blue" onclick="window.location.href='Mensajeros.php'">Ir</button>
+          </div>
+        </div>
       </div>
-      <br>
-      <div class="form-group">
-        <label for="direccion">Dirección:</label>
-        <input type="text" class="form-control" id="direccion" placeholder="Ingrese la dirección">
+
+      <div class="col">
+        <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg" style="background-image: url(images/vendedores.jpg); background-size: cover;">
+          <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+            <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold" style="color: black;">Vendedores</h3>
+            </br></br></br></br></br>
+            <button class="btn btn-warning text-blue" onclick="window.location.href='viajes.php'">Ir</button>
+          </div>
+        </div>
       </div>
-      <br>
-      <div class="form-group">
-        <label for="ubicacion">Ubicación Google Maps:</label>
-        <input type="text" class="form-control" id="ubicacion" placeholder="Ingrese la ubicación en Google Maps">
-      </div>
-      <br>
-      <button type="submit" class="btn btn-primary">Guardar</button>
-    </form>
+    </div>
   </div>
+
+  
+
   <!-- footer -->
   <div class="container">
     <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">

@@ -136,7 +136,7 @@ $conn->close();
 
                 <img src="https://github.com/mdo.png" alt="mdo" width="32" height="32" class="rounded-circle">
                 <?php
-                session_start();
+              
                 if (isset($_SESSION['username'])) {
                   echo '<a class="dropdown-item" href="#">' . $_SESSION['username'] . '</a>';
                 }

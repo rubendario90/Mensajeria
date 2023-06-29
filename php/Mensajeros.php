@@ -115,7 +115,69 @@
       </div>
 
   </header>
+ <!-- cards -->
+ <div class="container px-4 py-5" id="custom-cards">
+        <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
+        <div class="col">
+                <div class="d-flex justify-content-center">
+                    <div class="card" style="width: 18rem;">
+                        <img src="images/Entregas.jpg" class="card-img-top rounded-circle" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Domicilios Asignados</h5>
+                            <p class="card-text">Desde la salida hasta la entrega, eres el héroe en cada viaje.</p>
+                            <a href="crear_viaje.php" class="btn btn-primary">Ingresar</a>
+                            
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="col">
+                <div class="d-flex justify-content-center">
+                    <div class="card" style="width: 18rem;">
+                        <img src="images/viajes.jpg" class="card-img-top rounded-circle" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Domicilios Sin Asignacion</h5>
+                            <p class="card-text">Atrévete a llevar cada encomienda a su destino, dejando huellas de satisfacción.</p>
+                            <a href="#" class="btn btn-primary">Ingresar</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col">
+                <div class="d-flex justify-content-center">
+                    <div class="card" style="width: 18rem;">
+                        <img src="images/historial.jpg" class="card-img-top rounded-circle" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Domicilios Realizados</h5>
+                            <p class="card-text">Con cada destino alcanzado, dejamos una estela de excelencia en nuestros viajes completados.</p>
+                            <a href="#" class="btn btn-primary">Ingresar</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- cuerpo de la pagina -->
+    <div class="d-flex justify-content-center">
+        <div class="card" style="width: 18rem;">
+            <img src="images/crear_viaje.jpeg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Mapas</h5>
+                <p class="card-text">Explora mapas detallados con información geográfica precisa.</p>
+            </div>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">Obtén rutas optimizadas para realizar entregas de manera eficiente.</li>
 
+            </ul>
+            <div class="card-body">
+                <a href="#" class="card-link">Mapa de zoonificacion</a>
+                <br>
+                <a href="https://www.google.com/maps/@6.2999502,-75.5625925,15z?hl=es&entry=ttu" class="card-link">Google maps</a>
+            </div>
+        </div>
+    </div>
    <!-- footer -->
    <div class="container">
         <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
