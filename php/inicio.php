@@ -59,11 +59,11 @@
                 </a>
               </li>
               <li>
-                <a href="Base de conocimiento/inicio_Inventario.php" class="nav-link text-white">
+                <a href="inicio_Inventario.php" class="nav-link text-white">
                   <svg class="bi d-block mx-auto mb-1" width="24" height="24">
                     <use xlink:href="#table"></use>
                   </svg>
-                  Inventario
+                  Bodega
                 </a>
               </li>
               <li>
@@ -75,11 +75,11 @@
                 </a>
               </li>
               <li>
-                <a href="#" class="nav-link text-white">
+                <a href="maps.php" class="nav-link text-white">
                   <svg class="bi d-block mx-auto mb-1" width="24" height="24">
                     <use xlink:href="#people-circle"></use>
                   </svg>
-                  Viajes
+                  Maps
                 </a>
               </li>
             </ul>

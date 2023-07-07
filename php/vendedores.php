@@ -2,15 +2,15 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página con Bootstrap</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Página con Bootstrap</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
 
 </head>
 
 <body>
-<header>
+  <header>
     <div class="px-3 py-2 text-bg-primary border-bottom">
       <div class="container">
         
@@ -43,7 +43,7 @@
 
             <ul class="nav col-12 col-lg-auto my-2 justify-content-center my-md-0 text-small">
               <li>
-                <a href="#" class="nav-link text-secondary">
+                <a href="inicio.php" class="nav-link text-secondary">
                   <svg class="bi d-block mx-auto mb-1" width="24" height="24">
                     <use xlink:href="#home"></use>
                   </svg>
@@ -51,7 +51,7 @@
                 </a>
               </li>
               <li>
-                <a href="#" class="nav-link text-white">
+                <a href="Domicilios.php" class="nav-link text-white">
                   <svg class="bi d-block mx-auto mb-1" width="24" height="24">
                     <use xlink:href="#speedometer2"></use>
                   </svg>
@@ -59,11 +59,11 @@
                 </a>
               </li>
               <li>
-                <a href="#" class="nav-link text-white">
+                <a href="inicio_Inventario.php" class="nav-link text-white">
                   <svg class="bi d-block mx-auto mb-1" width="24" height="24">
                     <use xlink:href="#table"></use>
                   </svg>
-                  Inventario
+                  Bodega
                 </a>
               </li>
               <li>
@@ -75,11 +75,11 @@
                 </a>
               </li>
               <li>
-                <a href="#" class="nav-link text-white">
+                <a href="maps.php" class="nav-link text-white">
                   <svg class="bi d-block mx-auto mb-1" width="24" height="24">
                     <use xlink:href="#people-circle"></use>
                   </svg>
-                  Viajes
+                  Maps
                 </a>
               </li>
             </ul>
@@ -115,15 +115,17 @@
       </div>
 
   </header>
- <!-- cards -->
- <div class="container px-4 py-5" id="custom-cards">
+  
+
+    <!-- cards -->
+    <div class="container px-4 py-5" id="custom-cards">
         <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
         <div class="col">
                 <div class="d-flex justify-content-center">
                     <div class="card" style="width: 18rem;">
-                        <img src="images/Entregas.jpg" class="card-img-top rounded-circle" alt="...">
+                        <img src="images/Entregas.jpg" class="card-img-top " alt="...">
                         <div class="card-body">
-                            <h5 class="card-title">Domicilios Asignados</h5>
+                            <h5 class="card-title">Crear Domicilio</h5>
                             <p class="card-text">Desde la salida hasta la entrega, eres el héroe en cada viaje.</p>
                             <a href="crear_viaje.php" class="btn btn-primary">Ingresar</a>
                             
@@ -135,9 +137,9 @@
             <div class="col">
                 <div class="d-flex justify-content-center">
                     <div class="card" style="width: 18rem;">
-                        <img src="images/viajes.jpg" class="card-img-top rounded-circle" alt="...">
+                        <img src="images/viajes.jpg" class="card-img-top " alt="...">
                         <div class="card-body">
-                            <h5 class="card-title">Domicilios Sin Asignacion</h5>
+                            <h5 class="card-title">Domicilios Pendientes</h5>
                             <p class="card-text">Atrévete a llevar cada encomienda a su destino, dejando huellas de satisfacción.</p>
                             <a href="#" class="btn btn-primary">Ingresar</a>
                         </div>
@@ -148,9 +150,9 @@
             <div class="col">
                 <div class="d-flex justify-content-center">
                     <div class="card" style="width: 18rem;">
-                        <img src="images/historial.jpg" class="card-img-top rounded-circle" alt="...">
+                        <img src="images/historial.jpg" class="card-img-top " alt="...">
                         <div class="card-body">
-                            <h5 class="card-title">Domicilios Realizados</h5>
+                            <h5 class="card-title">Domicilios En Curso</h5>
                             <p class="card-text">Con cada destino alcanzado, dejamos una estela de excelencia en nuestros viajes completados.</p>
                             <a href="#" class="btn btn-primary">Ingresar</a>
                         </div>
@@ -172,14 +174,14 @@
 
             </ul>
             <div class="card-body">
-                <a href="#" class="card-link">Mapa de zoonificacion</a>
+                <a href="maps.php" class="card-link">Mapa de zoonificacion</a>
                 <br>
                 <a href="https://www.google.com/maps/@6.2999502,-75.5625925,15z?hl=es&entry=ttu" class="card-link">Google maps</a>
             </div>
         </div>
     </div>
-   <!-- footer -->
-   <div class="container">
+    <!-- footer -->
+    <div class="container">
         <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
             <p class="col-md-4 mb-0 text-body-secondary">© 2023 Automuelles, Inc</p>
 

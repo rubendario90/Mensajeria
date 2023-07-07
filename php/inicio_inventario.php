@@ -5,7 +5,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Página con Bootstrap</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
 
 </head>
 
@@ -13,17 +14,17 @@
   <header>
     <div class="px-3 py-2 text-bg-primary border-bottom">
       <div class="container">
-        
+
         <div class="text-end">
-            <button type="button" class="btn btn-outline-light me-2">
-              Ingresar
-            </button>
-            <button type="button" class="btn btn-outline-light me-2">
-              Registrarse
-            </button>
-          </div>
+          <button type="button" class="btn btn-outline-light me-2">
+            Ingresar
+          </button>
+          <button type="button" class="btn btn-outline-light me-2">
+            Registrarse
+          </button>
+        </div>
         <div class="px-3 py-2 border-bottom mb-3">
-        
+
           <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
             <a href="/" class="d-flex align-items-center my-2 my-lg-0 me-lg-auto text-white text-decoration-none">
               <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap">
@@ -43,7 +44,7 @@
 
             <ul class="nav col-12 col-lg-auto my-2 justify-content-center my-md-0 text-small">
               <li>
-                <a href="php/inicio.php" class="nav-link text-secondary">
+                <a href="inicio.php" class="nav-link text-secondary">
                   <svg class="bi d-block mx-auto mb-1" width="24" height="24">
                     <use xlink:href="#home"></use>
                   </svg>
@@ -84,7 +85,8 @@
               </li>
             </ul>
             <div class="dropdown text-end">
-              <a href="#" class="d-block link-body-emphasis text-decoration-none dropdown-toggle show" data-bs-toggle="dropdown" aria-expanded="true">
+              <a href="#" class="d-block link-body-emphasis text-decoration-none dropdown-toggle show"
+                data-bs-toggle="dropdown" aria-expanded="true">
 
                 <img src="https://github.com/mdo.png" alt="mdo" width="32" height="32" class="rounded-circle">
                 <?php
@@ -95,9 +97,11 @@
                 ?>
               </a>
 
-              <ul class="dropdown-menu text-small show" style="position: absolute; inset: 0px auto auto 0px; margin: 0px; transform: translate(0px, 34px);" data-popper-placement="bottom-start">
+              <ul class="dropdown-menu text-small show"
+                style="position: absolute; inset: 0px auto auto 0px; margin: 0px; transform: translate(0px, 34px);"
+                data-popper-placement="bottom-start">
 
-                
+
                 <li><a class="dropdown-item" href="#">Opciones</a></li>
                 <li><a class="dropdown-item" href="#">Perfil</a></li>
                 <li>
@@ -105,13 +109,14 @@
                 </li>
                 <li><a class="dropdown-item" href="#">Salir</a></li>
               </ul>
-              
+
             </div>
-            
+
           </div>
-          
+
         </div>
-        <input type="search" class="form-control form-control-dark text-bg-white" placeholder="Buscar..." aria-label="Search">
+        <input type="search" class="form-control form-control-dark text-bg-white" placeholder="Buscar..."
+          aria-label="Search">
       </div>
 
   </header>
@@ -122,45 +127,43 @@
   <div class="container px-4 py-5" id="custom-cards">
     <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
       <div class="col">
-        <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg" style="background-image: url(images/crear_viaje.jpeg); background-size: cover;">
-          <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
-            <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold" style="color: black;">Domicilios</h3>
-            </br></br></br></br></br>
-            <button class="btn btn-warning text-blue" onclick="window.location.href='domicilios.php'">Ir</button>
+        <div class="d-flex justify-content-center">
+          <div class="card" style="width: 18rem;">
+            <img src="images/crear_producto.jpg" class="card-img-top " alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Crear Producto</h5>
+              <p class="card-text">Desde la salida hasta la entrega, eres el héroe en cada viaje.</p>
+              <a href="inventario.php" class="btn btn-primary">Ingresar</a>
+
+            </div>
           </div>
         </div>
+ 
       </div>
-
       <div class="col">
-        <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg" style="background-image: url(images/Mensajeros.jpg); background-size: cover;">
-          <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
-            <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold" style="color: black;">Mensajeros</h3>
-            </br></br></br></br></br>
-            <button class="btn btn-warning text-blue" onclick="window.location.href='Mensajeros.php'">Ir</button>
-          </div>
-        </div>
-      </div>
-
-      <div class="col">
-        <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg" style="background-image: url(images/vendedores.jpg); background-size: cover;">
-          <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
-            <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold" style="color: black;">Vendedores</h3>
-            </br></br></br></br></br>
-            <button class="btn btn-warning text-blue" onclick="window.location.href='viajes.php'">Ir</button>
+        <div class="d-flex justify-content-center">
+          <div class="card" style="width: 18rem;">
+            <img src="images/buscar_producto.jpg" class="card-img-top " alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Buscar Producto</h5>
+              <p class="card-text">Atrévete a llevar cada encomienda a su destino, dejando huellas de satisfacción.</p>
+              <a href="buscar_inventario.php" class="btn btn-primary">Ingresar</a>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-
   
+
 
   <!-- footer -->
   <div class="container">
     <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
       <p class="col-md-4 mb-0 text-body-secondary">© 2023 Automuelles, Inc</p>
 
-      <a href="/" class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+      <a href="/"
+        class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
         <svg class="bi me-2" width="40" height="32">
           <use xlink:href="#bootstrap"></use>
         </svg>
@@ -170,8 +173,12 @@
     </footer>
   </div>
 
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js" integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js" integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"
+    integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js"
+    integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ"
+    crossorigin="anonymous"></script>
 </body>
 
 </html>
