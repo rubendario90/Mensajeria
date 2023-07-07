@@ -141,7 +141,7 @@
                         <div class="card-body">
                             <h5 class="card-title">Domicilios Pendientes</h5>
                             <p class="card-text">Atrévete a llevar cada encomienda a su destino, dejando huellas de satisfacción.</p>
-                            <a href="#" class="btn btn-primary">Ingresar</a>
+                            <a href="domicilios_pendientes.php" class="btn btn-primary">Ingresar</a>
                         </div>
                     </div>
                 </div>

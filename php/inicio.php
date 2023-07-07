@@ -86,7 +86,7 @@
             <div class="dropdown text-end">
               <a href="#" class="d-block link-body-emphasis text-decoration-none dropdown-toggle show" data-bs-toggle="dropdown" aria-expanded="true">
 
-                <img src="https://github.com/mdo.png" alt="mdo" width="32" height="32" class="rounded-circle">
+                <img src="#" alt="mdo" width="32" height="32" class="rounded-circle">
                 <?php
                 session_start();
                 if (isset($_SESSION['username'])) {
