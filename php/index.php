@@ -9,21 +9,20 @@
   <link rel="stylesheet" href="https://unpkg.com/transition-style">
 
   <head>
-    <div class="px-3 py-2 text-bg-primary border-bottom">
+    
+        
+  
+
+<body>
+<div class="px-3 py-2 text-bg-primary border-bottom">
       <div class="container">
 
         <div class="text-end">
-          <button type="button" class="btn btn-outline-light me-2">
-            Ingresar
-          </button>
-          <button type="button" class="btn btn-outline-light me-2">
-            Registrarse
-          </button>
-        </div>
-        <div class="px-3 py-2 border-bottom mb-3">
-  </head>
-
-<body>
+        <a href="login.php"><button type="button" class="btn btn-outline-light me-2">Ingresar</button></a>
+        <a href="registro.php"><button type="button" class="btn btn-outline-light me-2">Registrarse</button></a>
+      </div>
+    </div>
+<div class="px-3 py-2 border-bottom mb-3">
   <div class="container">
     <div class="text-center">
       <div transition-style="in:wipe:up">

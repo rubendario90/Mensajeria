@@ -46,13 +46,29 @@ $conn->close();
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Página con Bootstrap</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://unpkg.com/transition-style">
   
 </head>
 
 <body>
 <header>
-    
+<div class="px-3 py-2 text-bg-primary border-bottom">
+      <div class="container">
+
+        <div class="text-end">
+        <a href="login.php"><button type="button" class="btn btn-outline-light me-2">Ingresar</button></a>
+        <a href="registro.php"><button type="button" class="btn btn-outline-light me-2">Registrarse</button></a>
+      </div>
+    </div>
+<div class="px-3 py-2 border-bottom mb-3">
+  <div class="container">
+    <div class="text-center">
+      <div transition-style="in:wipe:up">
+        <h1 class="text-white">Bienvenidos</h1>
+      </div>
+    </div>
+  </div>
   </header>
   
   <!-- registro -->
@@ -103,13 +119,6 @@ $conn->close();
         </svg>
       </a>
 
-      <ul class="nav col-md-4 justify-content-end">
-        <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Home</a></li>
-        <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Features</a></li>
-        <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Pricing</a></li>
-        <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">FAQs</a></li>
-        <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">About</a></li>
-      </ul>
     </footer>
   </div>
 
