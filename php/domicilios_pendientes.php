@@ -116,73 +116,94 @@
 
   </header>
 
-  <div class="container">
-    <h2>Lista de Viajes Pendientes</h2>
+ <!-- CUERPO DE LA PAGINA -->
+ <div class="container">
+    <h1>Viajes Pendientes</h1>
     <table class="table">
-      <thead>
-        <tr>
-          <th>ID</th>
-          <th>Nombre de Logueo</th>
-          <th>Número de Factura</th>
-          <th>Nombre del Cliente</th>
-          <th>Número de Contacto</th>
-          <th>Lugar de Entrega</th>
-          <th>Observaciones</th>
-          <th>Mensajero</th>
-          <th>Estado</th>
-          <th>Acciones</th>
-        </tr>
-      </thead>
-      <tbody>
-        <?php
-          // Ejemplo de datos de viajes pendientes
-          $automuelles = [
-            [
-              'id' => 1,
-              'nombre_logueo' => 'John Doe',
-              'numero_factura' => 'F12345',
-              'nombre_cliente' => 'Cliente 1',
-              'numero_contacto' => '123456789',
-              'lugar_entrega' => 'Dirección 1',
-              'observaciones' => 'Observación 1',
-              'mensajero' => 'Mensajero 1',
-              'estado' => 'Pendiente',
-            ],
-            [
-              'id' => 2,
-              'nombre_logueo' => 'Jane Smith',
-              'numero_factura' => 'F67890',
-              'nombre_cliente' => 'Cliente 2',
-              'numero_contacto' => '987654321',
-              'lugar_entrega' => 'Dirección 2',
-              'observaciones' => 'Observación 2',
-              'mensajero' => 'Mensajero 2',
-              'estado' => 'Pendiente',
-            ],
-          ];
+        <thead>
+            <tr>
+                <th>Nombre Usuario</th>
+                <th>Numero Factura</th>
+                <th>Nombre Cliente</th>
+                <th>Numero Contacto</th>
+                <th>Lugar Entrega</th>
+                <th>Observaciones</th>
+                <th>Mensajero / Estado</th>
+                <th>Guardar</th>
+            </tr>
+        </thead>
+        <tbody>
+            <?php
+            // Establecer la conexión con la base de datos
+            $host = "localhost";
+            $username = "root";
+            $password = "0607";
+            $database = "automuelles";
+            $conn = new mysqli($host, $username, $password, $database);
+            if ($conn->connect_error) {
+                die("Error de conexión: " . $conn->connect_error);
+            }
 
-          foreach ($automuelles as $viaje) {
-            echo '<tr>';
-            echo '<td>' . $viaje['id'] . '</td>';
-            echo '<td>' . $viaje['nombre_logueo'] . '</td>';
-            echo '<td>' . $viaje['numero_factura'] . '</td>';
-            echo '<td>' . $viaje['nombre_cliente'] . '</td>';
-            echo '<td>' . $viaje['numero_contacto'] . '</td>';
-            echo '<td>' . $viaje['lugar_entrega'] . '</td>';
-            echo '<td>' . $viaje['observaciones'] . '</td>';
-            echo '<td><input type="text" value="' . $viaje['mensajero'] . '"></td>';
-            echo '<td><input type="text" value="' . $viaje['estado'] . '"></td>';
-            echo '<td><button class="btn btn-primary">Guardar</button></td>';
-            echo '</tr>';
-          }
-        ?>
-      </tbody>
+            // Actualizar los campos editables si se envió el formulario
+            if ($_SERVER["REQUEST_METHOD"] == "POST") {
+                $nombreUsuario = $_POST["nombreUsuario"];
+                $mensajero = $_POST["mensajero"];
+                $estado = $_POST["estado"];
+
+                // Insertar o actualizar los valores en la base de datos
+                $sql = "INSERT INTO viajes_2 (Nombre_Usuario, Numero_Factura, Nombre_Cliente, Numero_Contacto, Lugar_Entrega, Observaciones, Mensajero, Estado)
+                        SELECT Nombre_logueo, Numero_Factura, Nombre_Cliente, Numero_Contacto, Lugar_Entrega, observaciones, '$mensajero', '$estado'
+                        FROM viajes
+                        WHERE Estado = 'pendiente' AND Nombre_logueo = '$nombreUsuario'
+                        ON DUPLICATE KEY UPDATE Mensajero = '$mensajero', Estado = '$estado'";
+                if ($conn->query($sql) === TRUE) {
+                    echo "Valores guardados exitosamente.";
+                } else {
+                    echo "Error al guardar valores: " . $conn->error;
+                }
+            }
+
+            // Consulta para obtener los viajes pendientes
+            $sql = "SELECT * FROM viajes WHERE Estado = 'pendiente'";
+            $result = $conn->query($sql);
+
+            // Mostrar los resultados en la tabla
+            if ($result->num_rows > 0) {
+                while ($row = $result->fetch_assoc()) {
+                    echo "<tr>";
+                    echo "<td>" . $row["Nombre_logueo"] . "</td>";
+                    echo "<td>" . $row["Numero_Factura"] . "</td>";
+                    echo "<td>" . $row["Nombre_Cliente"] . "</td>";
+                    echo "<td>" . $row["Numero_Contacto"] . "</td>";
+                    echo "<td>" . $row["Lugar_Entrega"] . "</td>";
+                    echo "<td>" . $row["observaciones"] . "</td>";
+                    echo "<td>
+                            <form method='post' action='" . $_SERVER["PHP_SELF"] . "'>
+                                <input type='hidden' name='nombreUsuario' value='" . $row["Nombre_logueo"] . "'>
+                                <input type='text' name='mensajero' value='" . $row["Mensajero"] . "'>
+                                <input type='text' name='estado' value='" . $row["Estado"] . "'>
+                            </td>";
+                    echo "<td>
+                                <input type='submit' value='Guardar'>
+                            </form>
+                        </td>";
+                    echo "</tr>";
+                }
+            } else {
+                echo "<tr><td colspan='8'>No hay viajes pendientes.</td></tr>";
+            }
+
+            // Cerrar la conexión a la base de datos
+            $conn->close();
+            ?>
+        </tbody>
     </table>
 </div>
 
- 
 
-  
+
+
+ 
 
   <!-- footer -->
   <div class="container">

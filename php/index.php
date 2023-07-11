@@ -1,44 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Página con Bootstrap</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-  <style>
-   body {
-      background-image: url("camion.jpg");
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      min-height: 100vh;
-    }
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://unpkg.com/transition-style">
 
-    .container {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-    }
+  <head>
+    <div class="px-3 py-2 text-bg-primary border-bottom">
+      <div class="container">
 
-    @media (min-width: 768px) {
-      body { 
-        background-size: 700px 1200px;
-      }
-    }
-  </style>
-</head>
+        <div class="text-end">
+          <button type="button" class="btn btn-outline-light me-2">
+            Ingresar
+          </button>
+          <button type="button" class="btn btn-outline-light me-2">
+            Registrarse
+          </button>
+        </div>
+        <div class="px-3 py-2 border-bottom mb-3">
+  </head>
+
 <body>
   <div class="container">
     <div class="text-center">
-      <h1 class="text-white">Bienvenidos</h1>
-      <div class="my-3">
-        <a href="login.php"><button class="btn btn-primary">Ingresar</button></a>
-        <a href="registro.php"> <button class="btn btn-success">Registrar</button></a>
+      <div transition-style="in:wipe:up">
+        <h1 class="text-white">Bienvenidos</h1>
       </div>
     </div>
   </div>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js" integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS" crossorigin="anonymous"></script>
 </body>
+
 </html>
