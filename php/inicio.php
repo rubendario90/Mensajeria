@@ -9,8 +9,7 @@
 
 </head>
 
-<body>
-  <header>
+<header>
     <div class="px-3 py-2 text-bg-primary border-bottom">
       <div class="container">
         
@@ -43,7 +42,7 @@
 
             <ul class="nav col-12 col-lg-auto my-2 justify-content-center my-md-0 text-small">
               <li>
-                <a href="inicio.php" class="nav-link text-secondary">
+                <a href="#" class="nav-link text-secondary">
                   <svg class="bi d-block mx-auto mb-1" width="24" height="24">
                     <use xlink:href="#home"></use>
                   </svg>
@@ -51,7 +50,7 @@
                 </a>
               </li>
               <li>
-                <a href="Domicilios.php" class="nav-link text-white">
+                <a href="#" class="nav-link text-white">
                   <svg class="bi d-block mx-auto mb-1" width="24" height="24">
                     <use xlink:href="#speedometer2"></use>
                   </svg>
@@ -59,11 +58,11 @@
                 </a>
               </li>
               <li>
-                <a href="inicio_Inventario.php" class="nav-link text-white">
+                <a href="#" class="nav-link text-white">
                   <svg class="bi d-block mx-auto mb-1" width="24" height="24">
                     <use xlink:href="#table"></use>
                   </svg>
-                  Bodega
+                  Inventario
                 </a>
               </li>
               <li>
@@ -75,18 +74,18 @@
                 </a>
               </li>
               <li>
-                <a href="maps.php" class="nav-link text-white">
+                <a href="#" class="nav-link text-white">
                   <svg class="bi d-block mx-auto mb-1" width="24" height="24">
                     <use xlink:href="#people-circle"></use>
                   </svg>
-                  Maps
+                  Viajes
                 </a>
               </li>
             </ul>
             <div class="dropdown text-end">
               <a href="#" class="d-block link-body-emphasis text-decoration-none dropdown-toggle show" data-bs-toggle="dropdown" aria-expanded="true">
 
-                <img src="#" alt="mdo" width="32" height="32" class="rounded-circle">
+                <img src="https://github.com/mdo.png" alt="mdo" width="32" height="32" class="rounded-circle">
                 <?php
                 session_start();
                 if (isset($_SESSION['username'])) {
@@ -111,51 +110,110 @@
           </div>
           
         </div>
-        <input type="search" class="form-control form-control-dark text-bg-white" placeholder="Buscar..." aria-label="Search">
+        
       </div>
 
   </header>
+  <style>
+    .flex-container {
+      position: absolute;
+      height: 100vh;
+      width: 100%;
+      display: -webkit-flex;
+      display: flex;
+      overflow: hidden;
+    }
 
+    .flex-slide {
+      width: 200px;
+      height: 200px;
+      margin: 10px;
+      background-color: #f2f2f2;
+      border-radius: 5px;
+      box-shadow: 0 0 5px #888;
+      transition: transform 0.5s ease;
+    }
 
+    .flex-slide:hover {
+      transform: scale(1.1);
+    }
 
-  <!-- cards -->
-  <div class="container px-4 py-5" id="custom-cards">
-    <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
-      <div class="col">
-        <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg" style="background-image: url(images/crear_viaje.jpeg); background-size: cover;">
-          <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
-            <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold" style="color: black;">Domicilios</h3>
-            </br></br></br></br></br>
-            <button class="btn btn-primary text-white" onclick="window.location.href='domicilios.php'">Ir</button>
+    .card {
+      border: 1px solid #ccc;
+      padding: 10px;
+      margin: 10px;
+    }
 
-          </div>
-        </div>
-      </div>
+    .card-body {
+      padding: 10px;
+    }
 
-      <div class="col">
-        <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg" style="background-image: url(images/Mensajeros.jpg); background-size: cover;">
-          <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
-            <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold" style="color: black;">Mensajeros</h3>
-            </br></br></br></br></br>
-            <button class="btn btn-primary text-white" onclick="window.location.href='Mensajeros.php'">Ir</button>
-          </div>
-        </div>
-      </div>
+    .card-title {
+      font-size: 16px;
+      font-weight: bold;
+    }
 
-      <div class="col">
-        <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg" style="background-image: url(images/vendedores.jpg); background-size: cover;">
-          <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
-            <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold" style="color: black;">Vendedores</h3>
-            </br></br></br></br></br>
-            <button class="btn btn-primary text-white" onclick="window.location.href='vendedores.php'">Ir</button>
-          </div>
+    .card-text {
+      font-size: 14px;
+    }
+
+    .btn {
+      border: none;
+      background-color: blueviolet;
+      color: white;
+      font-weight: 500;
+    }
+
+    .btn:hover {
+      opacity: 0.8;
+      background-color: aqua;
+    }
+
+    
+  </style>
+
+  <div class="flex-container">
+    <div class="flex-slide">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Crear Domicilio</h5>
+          <p class="card-text">Card text</p>
+          <a href="#" class="btn btn-primary">Ingresar</a>
         </div>
       </div>
     </div>
+
+    <div class="flex-slide">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">Card text</p>
+          <a href="#" class="btn btn-primary">Ingresar</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="flex-slide">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">Card text</p>
+          <a href="#" class="btn btn-primary">Ingresar</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="flex-slide">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">Card text</p>
+          <a href="#" class="btn btn-primary">Ingresar</a>
+        </div>
+      </div>
+    </div>
+
   </div>
-
-  
-
   <!-- footer -->
   <div class="container">
     <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
